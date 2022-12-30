@@ -104,3 +104,9 @@ html, body {
 .ai{
   background-color: #40414F;
 }
+
+@media screen and (max-width: 600px) {
+  .botIcon, .humanIcon{
+    margin-left: 30px;
+  }
+}
