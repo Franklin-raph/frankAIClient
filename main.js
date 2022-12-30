@@ -57,15 +57,15 @@ async function handleSubmit (e){
       }
   })
   
+  const { data } = await response.json();
   if (response.ok) {
-    const { data } = await response.json();
     console.log(data)
     clearInterval(loadInterval);
     botTyping(botAnswer, data.trim())
 
   } else {
     clearInterval(loadInterval);
-    botAnswer.textContent = "oops something went wrong";
+    botTyping(botAnswer, "Oops!! something went wrong. Please try again later")
   }
 }
 form.addEventListener('submit', handleSubmit)
