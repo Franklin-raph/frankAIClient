@@ -47,7 +47,7 @@ async function handleSubmit (e){
 
   chatArea.scrollTop = chatArea.scrollHeight
 
-  const response = await fetch('http://localhost:8000/openai/chatGptClone', {
+  const response = await fetch('https://frankai.onrender.com/openai/chatGptClone', {
       method: "POST",
       body: JSON.stringify({
         prompt: formData.get("prompt")
