@@ -46,7 +46,7 @@ async function handleSubmit (e){
   humanRequest.textContent = formData.get('prompt')
 
   chatArea.scrollTop = chatArea.scrollHeight
-
+  // https://frankai.onrender.com/openai/chatGptClone
   const response = await fetch('https://frankai.onrender.com/openai/chatGptClone', {
       method: "POST",
       body: JSON.stringify({
@@ -59,6 +59,7 @@ async function handleSubmit (e){
   
   if (response.ok) {
     const { data } = await response.json();
+    console.log(data)
     clearInterval(loadInterval);
     botTyping(botAnswer, data.trim())
 
