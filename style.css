@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+
+*,
+*::before,
+*::after
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+html, body {
+  background: #343541;
+  position: relative;
+}
+
+.chatTextAndBtn{
+  position: fixed;
+  bottom: 2%;
+  padding: 1px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+}
+
+.chatTextAndBtn textarea{
+  background-color: #40414F;
+  outline: none;
+  color: #fff;
+  padding: 12px 10px 0;
+  width: 80%;
+  font-size: 20px;
+  border: none;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+  resize: none;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.chatTextAndBtn button{
+  all: unset;
+  background-color: #61dafb;
+  cursor: pointer;
+  height: 3rem;
+  border-radius: 5px;
+  padding: 0 15px;
+}
+
+.chat-log{
+  color: #fff;
+  padding: 20px 0px;
+  font-size: 20px;
+  display: flex;
+  /* gap: 10px; */
+}
+
+.botAnswer{
+  /* color: #fff;
+  padding: 20px 50px;
+  background-color: #40414F;
+  font-size: 20px;
+  display: flex;
+  gap: 10px; */
+}
+
+/* background-color: #5436DA; */
+.humanIcon{
+  display: inline-block;
+  border-radius: 7px;
+  padding: 7px 7px 1px;
+  margin-right: 10px;
+  margin-left: 70px;
+  background: #5436DA;
+}
+
+.botIcon{
+  display: inline-block;
+  background-color: #10A37F;
+  border-radius: 7px;
+  padding: 7px 7px 1px;
+  margin-right: 10px;
+  margin-left: 70px;
+}
+
+.human, .bot{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 20px 20px 0;
+}
+
+.bot{
+  background-color: #40414F;
+}
+
+.humanRequest, .botAnswer{
+  color: #fff;
+  font-size: 20px;
+}
+
+.ai{
+  background-color: #40414F;
+}
