@@ -92,6 +92,11 @@ html, body {
   font-size: 20px;
 }
 
+.botAnswer{
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
 .ai{
   background-color: #40414F;
 }
