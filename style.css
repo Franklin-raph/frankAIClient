@@ -13,17 +13,63 @@
 html, body {
   background: #343541;
   position: relative;
+  height: 100%;
+}
+
+#app{
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+nav{
+  background-color: #202123;
+  height: 100%;
+  position: relative;
+}
+
+#createImage{
+  display: none;
+}
+
+.toggler{
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+}
+
+.item{
+  border: 1px solid #4a4c55;
+  padding: 10px 5px 5px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.activeItem{
+  background-color: #10A37F;
+}
+
+#chatArea{
+  width: 100%;
 }
 
 .chatTextAndBtn{
   position: fixed;
   bottom: 2%;
-  padding: 1px 18px;
+  padding: 1px 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 7px;
-  width: 100%;
+  width: 80%;
 }
 
 .chatTextAndBtn textarea{
@@ -42,11 +88,13 @@ html, body {
 
 .chatTextAndBtn button{
   all: unset;
-  background-color: #61dafb;
+  background-color: #10A37F;
   cursor: pointer;
   height: 3rem;
   border-radius: 5px;
   padding: 0 15px;
+  font-weight: bold;
+  color: #fff;
 }
 
 .chat-log{
@@ -62,8 +110,7 @@ html, body {
   display: inline-block;
   border-radius: 7px;
   padding: 7px 7px 1px;
-  margin-right: 10px;
-  margin-left: 70px;
+  margin-left: 40px;
   background: #5436DA;
 }
 
@@ -72,8 +119,7 @@ html, body {
   background-color: #10A37F;
   border-radius: 7px;
   padding: 7px 7px 1px;
-  margin-right: 10px;
-  margin-left: 70px;
+  margin-left: 40px;
 }
 
 .human, .bot{
@@ -87,9 +133,17 @@ html, body {
   background-color: #40414F;
 }
 
-.humanRequest, .botAnswer{
+.humanRequest, .botAnswer, .botImageAnswer, .humanImageRequest, .botImageLoader {
   color: #fff;
   font-size: 20px;
+}
+
+.imageContainer{
+  width: 50%;
+}
+
+.botImageAnswer{
+  width: 100%;
 }
 
 .botAnswer{
@@ -100,6 +154,56 @@ html, body {
 .ai{
   background-color: #40414F;
 }
+
+
+.modal{
+  position: fixed;
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: #0000007a;
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.2s ease;
+}
+
+.modal_content{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18%;;
+  background-color: #10A37F;
+  border-radius: 10px;
+  padding: 50px 5px;
+}
+
+.modal_body{
+  text-align: center;
+  font-size: 25px;
+}
+
+.modalClose{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal.open {
+  pointer-events: all;
+  opacity: 1;
+  visibility: visible;
+}
+
+
 
 @media screen and (max-width: 600px) {
   .botIcon, .humanIcon{

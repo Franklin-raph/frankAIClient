@@ -9,27 +9,82 @@
   </head>
   <body>
     <div id="app">
-
-      <div id="chatArea">
-        <div class="human">
-          <div class="humanIcon">
-            <box-icon name='user' size="sm" color="white" flip='horizontal'></box-icon>
-          </div>
-          <p class="humanRequest">Hello Bot 	&#128075;</p>
+      <nav>
+        <div class="navtoggler">
+          <box-icon name='menu' size="sm" color="white" flip='horizontal'></box-icon>
         </div>
-
-        <div class="bot">
-          <div class="botIcon">
-            <box-icon name='bot' size="sm" color="white" flip='horizontal'></box-icon>
+        <div class="navContents">
+          <div class="item activeItem">
+            <box-icon name='question-mark' size="md" color="white" ></box-icon>
+            <p>Ask Me</p>
           </div>
-          <p class="botAnswer">Hi, how may i be of help? </p>
+          <div class="item">
+            <box-icon name='image-alt' size="md" color="white" flip='horizontal'></box-icon>
+            <p>Generate Images</p>
+          </div>
         </div>
+      </nav>
+      <div class="right" id="createCompletion">
+        <div id="chatArea">
+          <div class="human">
+            <div class="humanIcon">
+              <box-icon name='user' size="sm" color="white" flip='horizontal'></box-icon>
+            </div>
+            <p class="humanRequest">Hello Bot 	&#128075;</p>
+          </div>
+  
+          <div class="bot">
+            <div class="botIcon">
+              <box-icon name='bot' size="sm" color="white" flip='horizontal'></box-icon>
+            </div>
+            <p class="botAnswer">Hi, how may i be of help? </p>
+          </div>
+        </div>
+  
+        <form class="chatTextAndBtn">
+          <textarea id="textArea" name="prompt" placeholder="Ask My Ai"></textarea>
+          <button type="submit" class="createCompletionBtn">Submit</button>
+        </form>
       </div>
 
-      <form class="chatTextAndBtn">
-        <textarea id="textArea" name="prompt" placeholder="Ask My Ai"></textarea>
-        <button type="submit">Submit</button>
-      </form>
+      <div class="right" id="createImage">
+        <div id="chatArea">
+          <div class="human">
+            <div class="humanIcon">
+              <box-icon name='user' size="sm" color="white" flip='horizontal'></box-icon>
+            </div>
+            <p class="humanImageRequest">Hello Bot 	&#128075;</p>
+          </div>
+  
+          <div class="bot">
+            <div class="botIcon">
+              <box-icon name='bot' size="sm" color="white" flip='horizontal'></box-icon>
+            </div>
+            <span class="botImageLoader">Give a description of the image you want to generate</span>
+            <div class="imageContainer">
+              <img class="botImageAnswer" src="" alt="">
+            </div>
+          </div>
+        </div>
+  
+        <form class="chatTextAndBtn">
+          <textarea id="textArea" name="prompt" placeholder="Ask My Ai"></textarea>
+          <button type="submit" class="handleImageGenerationBtn">Submit</button>
+        </form>
+      </div>
+
+          <!--====== Modal-02 ======-->
+          <div class="modal">
+            <div class="modal_content">
+              <div class="modalClose">
+                <box-icon size="sm" color="white" name='x-circle'></box-icon>
+              </div>
+              <div class="modal_body">
+                  <p>The input field cannot be left empty</p>
+              </div>
+          </div>
+        </div>
+
 
     </div>
     <script type="module" src="/main.js"></script>
