@@ -18,7 +18,7 @@ html, body {
 
 #app{
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 2fr 7fr;
   position: absolute;
   left: 0;
   top: 0;
@@ -203,10 +203,69 @@ nav{
   visibility: visible;
 }
 
+.navtoggler{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #4a4c55;
+}
+
+.menuBar, .navClose{
+  display: none;
+}
+
+.navOverlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.329);
+  z-index: 8;
+  display: none;
+}
+
+@media screen and (max-width:1200px) {
+  .modal_content{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:830px) {
+  #app{
+    grid-template-columns: 7fr;
+  }
+
+  .navClose{
+    margin-top: 20px;
+    margin-left: 140px;
+  }
+
+  .menuBar, .navClose{
+    display: block;
+  }
+
+  nav{
+    position: absolute;
+    z-index: 9;
+    left: -100%;
+    transition: .5s;
+  }
+
+  .chatTextAndBtn{
+    width: 100%;
+  }
+}
 
 
 @media screen and (max-width: 600px) {
   .botIcon, .humanIcon{
     margin-left: 30px;
+  }
+
+  .modal_content{
+    width: 60%;
   }
 }

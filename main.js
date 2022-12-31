@@ -136,6 +136,7 @@ document.querySelector('.handleImageGenerationBtn').addEventListener('click', (e
 
 selectedItems.forEach((selectedItem, index) => {
   selectedItem.addEventListener('click', ()=>{
+
     selectedItems.forEach(unselectedBtn =>{
       unselectedBtn.classList.remove('activeItem')
     });
@@ -151,4 +152,21 @@ selectedItems.forEach((selectedItem, index) => {
       createCompletionPage.style.display = "block"
     }
   })
+})
+
+// document.querySelector('.navtoggler').addEventListener("click", function (){
+//   document.querySelector('nav').style.left = "0"
+// })
+
+document.querySelectorAll('.navtoggler').forEach(toggler => {
+  toggler.addEventListener('click', ()=> {
+    document.querySelector('nav').style.left = "0"
+    document.querySelector('.navOverlay').style.display = "block"
+  })
+})
+
+
+document.querySelector('.navClose').addEventListener("click", function (){
+  document.querySelector('nav').style.left = "-100%"
+  document.querySelector('.navOverlay').style.display = "none"
 })
