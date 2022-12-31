@@ -167,6 +167,11 @@ document.querySelectorAll('.navtoggler').forEach(toggler => {
 
 
 document.querySelector('.navClose').addEventListener("click", function (){
-  document.querySelector('nav').style.left = "-100%"
+  document.querySelector('nav').style.left = "-200px"
   document.querySelector('.navOverlay').style.display = "none"
+})
+
+
+document.querySelector('.copyBtn').addEventListener("click", () => {
+      navigator.clipboard.writeText(document.querySelector(".botAnswer").textContent);
 })
