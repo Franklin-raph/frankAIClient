@@ -60,6 +60,7 @@ nav{
 
 #chatArea{
   width: 100%;
+  margin-bottom: 6rem;
 }
 
 .chatTextAndBtn{
@@ -150,6 +151,8 @@ nav{
 .botAnswer{
   word-wrap: break-word;
   white-space: pre-wrap;
+  padding-right: 3rem;
+  text-align: justify;
 }
 
 .ai{
@@ -235,7 +238,7 @@ nav{
 
 .downloadBtn, .copyBtn{
   position: absolute;
-  right: 30px;
+  right: 5px;
   /* background-color: #343541; */
   cursor: pointer;
   padding: 5px 7px;
@@ -285,3 +288,6 @@ nav{
     width: 60%;
   }
 }
+
+
+
