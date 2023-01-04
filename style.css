@@ -50,7 +50,7 @@ nav{
   align-items: center;
 }
 
-.item:hover{
+.contact a:hover{
   background-color: #343541;
   transition: .5s ease-in-out;
 }
