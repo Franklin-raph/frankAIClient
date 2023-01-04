@@ -7,26 +7,42 @@
     <title>Frank's AI</title>
     <link rel="stylesheet" href="./style.css">
   </head>
-  <body>
+  <body class="lightMode">
     <div id="app">
       <div class="navOverlay"></div>
+
+
       <nav>
-        <div class="navWrapper">
-          <div class="navContents">
-            <div class="navClose">
-              <box-icon name='x-circle' size="md" color="white" flip='horizontal'></box-icon>
-            </div>
-            <div class="item activeItem topMargin">
-              <box-icon name='question-mark' size="md" color="white" ></box-icon>
-              <p>Ask Me</p>
-            </div>
-            <div class="item">
-              <box-icon name='image-alt' size="md" color="white" flip='horizontal'></box-icon>
-              <p>Generate Images</p>
-            </div>
+        <div class="navContents">
+          <div class="navClose">
+            <box-icon name='x-circle' size="md" color="white" flip='horizontal'></box-icon>
+          </div>
+          <div class="item activeItem topMargin">
+            <box-icon name='question-mark' size="md" color="white" ></box-icon>
+            <p>Ask Me</p>
+          </div>
+          <div class="item">
+            <box-icon name='image-alt' size="md" color="white" flip='horizontal'></box-icon>
+            <p>Generate Images</p>
           </div>
         </div>
-        </nav>
+        <div class="contact">
+          <a href="https://wa.me/+2348139362969" class="navBottom item">
+            <box-icon name='whatsapp' size="sm" color="white" type='logo' ></box-icon>
+            <p>Let's Chat</p>
+          </a>
+          <a href="https://twitter.com/Frank_Dev007" class="navBottom item">
+            <box-icon name='twitter' size="sm" color="white" type='logo' ></box-icon>
+            <p>Let's Tweet</p>
+          </a>
+          <a href="https://www.linkedin.com/in/franklin-chinedu/" class="navBottom item">
+            <box-icon name='linkedin' size="sm" color="white" type='logo' ></box-icon>
+            <p>Let's Link Up</p>
+          </a>
+        </div>
+      </nav>
+
+
 
       <div class="right" id="createCompletion">
         <div class="navtoggler">

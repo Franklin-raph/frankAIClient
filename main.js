@@ -159,7 +159,7 @@ selectedItems.forEach((selectedItem, index) => {
 //   document.querySelector('nav').style.left = "0"
 // })
 
-document.querySelectorAll('.navtoggler').forEach(toggler => {
+document.querySelectorAll('.menuBar').forEach(toggler => {
   toggler.addEventListener('click', ()=> {
     document.querySelector('nav').style.left = "0"
     document.querySelector('.navOverlay').style.display = "block"
