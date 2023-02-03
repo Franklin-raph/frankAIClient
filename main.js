@@ -65,7 +65,7 @@ async function handleCreateCompletion(e) {
   }
 
   botLoader(botAnswer);
-  document.querySelector(".copyIcon").attributes.color.nodeValue = "#6E7681";
+  document.querySelector("#copyIcon").style.color = "#6E7681";
 
   humanRequest.textContent = "";
   humanRequest.textContent = formData.get("prompt");
@@ -181,5 +181,5 @@ document.querySelector(".navClose").addEventListener("click", function () {
 
 document.querySelector(".copyBtn").addEventListener("click", () => {
   navigator.clipboard.writeText(document.querySelector(".botAnswer").textContent);
-  document.querySelector(".copyIcon").attributes.color.nodeValue = "#10A37F";
+  document.querySelector("#copyIcon").style.color = "#10A37F";
 });

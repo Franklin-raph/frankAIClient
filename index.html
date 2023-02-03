@@ -5,6 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frank's AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="lightMode">
@@ -14,28 +22,28 @@
       <nav>
         <div class="navContents">
           <div class="navClose">
-            <box-icon name="x-circle" size="md" color="white" flip="horizontal"></box-icon>
+            <i class="ph-x-circle"></i>
           </div>
           <div class="item activeItem topMargin">
-            <box-icon name="question-mark" size="md" color="white"></box-icon>
+            <i class="ph-question"></i>
             <p>Ask Me</p>
           </div>
           <div class="item">
-            <box-icon name="image-alt" size="md" color="white" flip="horizontal"></box-icon>
+            <i class="ph-image"></i>
             <p>Generate Images</p>
           </div>
         </div>
         <div class="contact">
           <a href="https://wa.me/+2348139362969" class="navBottom item">
-            <box-icon name="whatsapp" size="sm" color="white" type="logo"></box-icon>
+            <i class="ph-whatsapp-logo"></i>
             <p>Let's Chat</p>
           </a>
           <a href="https://twitter.com/Frank_Dev007" class="navBottom item">
-            <box-icon name="twitter" size="sm" color="white" type="logo"></box-icon>
+            <i class="ph-twitter-logo"></i>
             <p>Let's Tweet</p>
           </a>
           <a href="https://www.linkedin.com/in/franklin-chinedu/" class="navBottom item">
-            <box-icon name="linkedin" size="sm" color="white" type="logo"></box-icon>
+            <i class="ph-linkedin-logo"></i>
             <p>Let's Link Up</p>
           </a>
         </div>
@@ -45,24 +53,24 @@
         <div class="navtoggler">
           <p>Frank's AI.</p>
           <div class="menuBar">
-            <box-icon name="menu" size="md" color="white" flip="horizontal"></box-icon>
+            <i class="ri-menu-line"></i>
           </div>
         </div>
         <div id="chatArea">
           <div class="human">
             <div class="humanIcon">
-              <box-icon name="user" size="sm" color="white" flip="horizontal"></box-icon>
+              <i class="ph-user"></i>
             </div>
             <p class="humanRequest">Hello Bot &#128075;</p>
           </div>
 
           <div class="bot">
             <div class="botIcon">
-              <box-icon name="bot" size="sm" color="white" flip="horizontal"></box-icon>
+              <i class="ph-robot"></i>
             </div>
             <p class="botAnswer">Hi, how may i be of help?</p>
             <div class="copyBtn">
-              <box-icon name="copy" color="#6E7681" size="sm" class="copyIcon"></box-icon>
+              <i class="ph-copy" id="copyIcon"></i>
             </div>
           </div>
         </div>
@@ -72,7 +80,7 @@
           <button type="submit" class="createCompletionBtn">Submit</button>
           <div class="bottomText">
             <p>Built with</p>
-            <box-icon name="heart" type="solid" size="sm" color="red"></box-icon>
+            <i class="ph-heart"></i>
             <p>by Frank</p>
           </div>
         </form>
@@ -83,20 +91,20 @@
         <div class="navtoggler">
           <p>Frank's AI.</p>
           <div class="menuBar">
-            <box-icon name="menu" size="md" color="white" flip="horizontal"></box-icon>
+            <i class="ri-menu-line"></i>
           </div>
         </div>
         <div id="chatArea">
           <div class="human">
             <div class="humanIcon">
-              <box-icon name="user" size="sm" color="white" flip="horizontal"></box-icon>
+              <i class="ph-user"></i>
             </div>
             <p class="humanImageRequest">Hello Bot &#128075;</p>
           </div>
 
           <div class="bot">
             <div class="botIcon">
-              <box-icon name="bot" size="sm" color="white" flip="horizontal"></box-icon>
+              <i class="ph-robot"></i>
             </div>
             <span class="botImageLoader">Give a description of the image you want to generate</span>
             <div class="imageContainer">
@@ -113,6 +121,11 @@
         <form class="chatTextAndBtn">
           <textarea id="textArea" name="prompt" placeholder="Ask My Ai"></textarea>
           <button type="submit" class="handleImageGenerationBtn">Submit</button>
+          <div class="bottomText">
+            <p>Built with</p>
+            <i class="ph-heart"></i>
+            <p>by Frank</p>
+          </div>
         </form>
       </div>
 
@@ -120,7 +133,7 @@
       <div class="modal">
         <div class="modal_content">
           <div class="modalClose">
-            <box-icon size="sm" color="white" name="x-circle"></box-icon>
+            <i class="ph-x-circle"></i>
           </div>
           <div class="modal_body">
             <p>The input field cannot be left empty</p>
@@ -142,6 +155,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
