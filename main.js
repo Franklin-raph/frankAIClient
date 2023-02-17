@@ -1,6 +1,7 @@
 // import "boxicons";
 const chatArea = document.getElementById("chatArea");
 const form = document.querySelector("form");
+const textarea = Array.from(document.getElementsByTagName("textarea"));
 const humanRequest = document.querySelector(".humanRequest");
 const botAnswer = document.querySelector(".botAnswer");
 
@@ -20,12 +21,6 @@ const modal = document.querySelector(".modal");
 const modalClose = document.querySelector(".modalClose").addEventListener("click", () => {
   modal.classList.remove("open");
 });
-
-// console.log(document.querySelector("textarea"));
-
-// document.querySelector("textarea").addEventListener("keyup", function (event) {
-//   console.log(event);
-// });
 
 let loadInterval;
 
@@ -56,8 +51,12 @@ function botTyping(element, text) {
 
 async function handleCreateCompletion(e) {
   e.preventDefault();
+  textarea.forEach(textarea => {
+    textarea.style.height = "48px"
+  })
+
   const formData = new FormData(form);
-  console.log(formData);
+  console.log(textarea);
   form.reset();
   if (!formData.get("prompt")) {
     modal.classList.add("open");
@@ -183,3 +182,19 @@ document.querySelector(".copyBtn").addEventListener("click", () => {
   navigator.clipboard.writeText(document.querySelector(".botAnswer").textContent);
   document.querySelector("#copyIcon").style.color = "#10A37F";
 });
+
+
+// Automatically grow a text area on typing
+for (let i = 0; i < textarea.length; i++) {
+  textarea[i].setAttribute("style", "height:" + (textarea[i].scrollHeight) + "px; overflow-y:auto;");
+  textarea[i].addEventListener("input", OnInput, false);
+}
+
+function OnInput() {
+  this.style.height = 0;
+  if(this.scrollHeight >= 192) {
+    this.style.height = "192px"
+    return
+  }
+  this.style.height = (this.scrollHeight) + "px";
+}

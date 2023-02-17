@@ -1,24 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
 
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Alegreya Sans", sans-serif;
 }
 
-html, body {
+html,
+body {
   background: #343541;
   position: relative;
   height: 100%;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-#app{
+#app {
   display: grid;
   grid-template-columns: 2fr 7fr;
   position: absolute;
@@ -28,14 +28,14 @@ a{
   right: 0;
 }
 
-nav{
+nav {
   background-color: #202123;
   height: 100%;
   position: relative;
   left: 0;
 }
 
-.contact{
+.contact {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -43,26 +43,26 @@ nav{
   padding: 10px 0;
 }
 
-.contact a{
+.contact a {
   display: flex;
   align-items: center;
 }
 
-.contact a:hover{
+.contact a:hover {
   background-color: #343541;
   transition: .5s ease-in-out;
 }
 
-#createImage{
+#createImage {
   display: none;
 }
 
-.toggler{
+.toggler {
   font-size: 20px;
   margin: 10px 0 0 10px;
 }
 
-.item{
+.item {
   border: 1px solid #4a4c55;
   padding: 10px 5px 5px;
   margin: 10px;
@@ -74,19 +74,19 @@ nav{
   cursor: pointer;
 }
 
-.activeItem{
+.activeItem {
   background-color: #10A37F;
 }
 
-#chatArea{
+#chatArea {
   width: 100%;
   margin-bottom: 6rem;
 }
 
-.chatTextAndBtn{
+.chatTextAndBtn {
   position: fixed;
   bottom: 5%;
-  padding: 1px 8px;
+  padding: 1px 8px 1px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +94,7 @@ nav{
   width: 80%;
 }
 
-.bottomText{
+.bottomText {
   position: absolute;
   bottom: 0;
   color: #fff;
@@ -104,21 +104,21 @@ nav{
   gap: 5px;
 }
 
-.chatTextAndBtn textarea{
+.chatTextAndBtn textarea {
   background-color: #40414F;
   outline: none;
   color: #fff;
-  padding: 12px 10px 0;
+  padding: 12px 10px;
   width: 80%;
+  height: 30px;
   font-size: 20px;
   border: none;
-  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .25);
   resize: none;
-  height: 3rem;
   overflow: hidden;
 }
 
-.chatTextAndBtn button{
+.chatTextAndBtn button {
   all: unset;
   background-color: #10A37F;
   cursor: pointer;
@@ -129,7 +129,7 @@ nav{
   color: #fff;
 }
 
-.chat-log{
+.chat-log {
   color: #fff;
   padding: 20px 0px;
   font-size: 20px;
@@ -138,7 +138,7 @@ nav{
 }
 
 /* background-color: #5436DA; */
-.humanIcon{
+.humanIcon {
   display: inline-block;
   border-radius: 7px;
   padding: 7px 7px 1px;
@@ -146,7 +146,7 @@ nav{
   background: #5436DA;
 }
 
-.botIcon{
+.botIcon {
   display: inline-block;
   background-color: #10A37F;
   border-radius: 7px;
@@ -154,55 +154,61 @@ nav{
   margin-left: 40px;
 }
 
-.human, .bot{
+.human,
+.bot {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   padding: 20px 20px 20px 0;
 }
 
-.bot{
+.bot {
   background-color: #40414F;
 }
 
-.humanRequest, .botAnswer, .botImageAnswer, .humanImageRequest, .botImageLoader {
+.humanRequest,
+.botAnswer,
+.botImageAnswer,
+.humanImageRequest,
+.botImageLoader {
   color: #fff;
   font-size: 20px;
 }
 
-.imageContainer{
+.imageContainer {
   width: 50%;
 }
 
-.botImageAnswer{
+.botImageAnswer {
   width: 100%;
 }
 
-.botAnswer{
+.botAnswer {
   word-wrap: break-word;
   white-space: pre-wrap;
   padding-right: 3rem;
   text-align: justify;
 }
 
-.ai{
+.ai {
   background-color: #40414F;
 }
 
-i{
+i {
   color: #fff;
   font-size: 24px;
 }
 
-.ph-heart{
+.ph-heart {
   color: red;
 }
 
-.ph-image, .ph-question{
+.ph-image,
+.ph-question {
   font-size: 30px;
 }
 
-.modal{
+.modal {
   position: fixed;
   color: #fff;
   top: 0;
@@ -219,23 +225,24 @@ i{
   transition: opacity 0.3s ease, visibility 0.2s ease;
 }
 
-.modal_content{
+.modal_content {
   position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 18%;;
+  width: 18%;
+  ;
   background-color: #10A37F;
   border-radius: 10px;
   padding: 50px 5px;
 }
 
-.modal_body{
+.modal_body {
   text-align: center;
   font-size: 25px;
 }
 
-.modalClose{
+.modalClose {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -249,7 +256,7 @@ i{
   visibility: visible;
 }
 
-.navtoggler{
+.navtoggler {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -260,11 +267,12 @@ i{
   border-bottom: 1px solid #4a4c55;
 }
 
-.menuBar, .navClose{
+.menuBar,
+.navClose {
   display: none;
 }
 
-.navOverlay{
+.navOverlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -273,12 +281,13 @@ i{
   display: none;
 }
 
-.imageContainer{
+.imageContainer {
   display: flex;
   justify-content: space-between;
 }
 
-.downloadBtn, .copyBtn{
+.downloadBtn,
+.copyBtn {
   position: absolute;
   right: 5px;
   /* background-color: #343541; */
@@ -287,46 +296,76 @@ i{
   border-radius: 50%;
 }
 
+.promptArea {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #40414F;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #343541;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @media screen and (max-width:1200px) {
-  .modal_content{
+  .modal_content {
     width: 40%;
   }
 }
 
 @media screen and (max-width:830px) {
-  #app{
+  #app {
     grid-template-columns: 7fr;
   }
 
-  .navClose{
+  .navClose {
     margin-top: 20px;
     margin-left: 140px;
   }
 
-  .menuBar, .navClose{
+  .menuBar,
+  .navClose {
     display: block;
     cursor: pointer;
   }
 
-  nav{
+  nav {
     position: absolute;
     z-index: 9;
     left: -100%;
     transition: .5s;
   }
 
-  .chatTextAndBtn{
+  .chatTextAndBtn {
     width: 100%;
   }
 }
 
 
 @media screen and (max-width: 600px) {
-  .botIcon, .humanIcon{
+
+  .botIcon,
+  .humanIcon {
     margin-left: 30px;
   }
 
-  .modal_content{
+  .modal_content {
     width: 60%;
   }
 }
