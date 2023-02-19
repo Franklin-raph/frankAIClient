@@ -4,20 +4,14 @@ const form = document.querySelector("form");
 const textarea = Array.from(document.getElementsByTagName("textarea"));
 const humanRequest = document.querySelector(".humanRequest");
 const botAnswer = document.querySelector(".botAnswer");
-
 const botImageLoader = document.querySelector(".botImageLoader");
-
 const humanImageRequest = document.querySelector(".humanImageRequest");
 const botImageAnswer = document.querySelector(".botImageAnswer");
 const selectedItems = document.querySelectorAll(".item");
-
 const createImagePage = document.getElementById("createImage");
 const createCompletionPage = document.getElementById("createCompletion");
-
 const createImageText = document.querySelector("#createImage #textArea");
-
 const modal = document.querySelector(".modal");
-
 const modalClose = document.querySelector(".modalClose").addEventListener("click", () => {
   modal.classList.remove("open");
 });
@@ -38,7 +32,6 @@ function botLoader(element) {
 
 function botTyping(element, text) {
   let index = 0;
-
   let interval = setInterval(() => {
     if (index < text.length) {
       element.textContent += text.charAt(index);
@@ -161,10 +154,6 @@ selectedItems.forEach((selectedItem, index) => {
     }
   });
 });
-
-// document.querySelector('.navtoggler').addEventListener("click", function (){
-//   document.querySelector('nav').style.left = "0"
-// })
 
 document.querySelectorAll(".menuBar").forEach((toggler) => {
   toggler.addEventListener("click", () => {
